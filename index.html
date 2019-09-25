@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chrome Launcher App</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/35c398e458.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div id="background-image">
+            <div id="overlay"></div>
+            <img id="weather-image" src="./Assets/bg-image/night.jpg" />
+        </div>
+        <div id="main-div">
+            <h2 id="time">3:00</h2>
+            <div id="name-input-wrapper">
+                <h4>What do you like to be called?</h4>
+                <input type="text" id="name-input" />
+            </div>
+            <div id="todo-input-wrapper">
+                <h3>Good Evening, <span id="first-name">Qaifi</span></h3>
+                <div id="major-todo-wrapper">
+                    <h4>What's your main focus today?</h4>
+                    <input type="text" id="major-todo" />
+                </div>
+                <div id="major-todo-item" class="todo-item">
+                    <label>
+                        <input id="major-todo-checkbox" style="width: 24px; height: 24px;" type="checkbox">
+                        <p id="major-todo-label" class="todo-text">Finish Assignment</p>
+                    </label>
+                    <i class="far fa-trash-alt delete-icon"></i>
+                </div>
+            </div>
+
+            <div id="weather-info">
+                <div>
+                    <img src="./Assets/weather-icons/partly-cloudy-day.svg" />
+                    <span>32&deg;</span>
+                    <p>Partly Cloudy Day</p>
+                </div>
+            </div>
+
+            <div id="todos-wrapper">
+                <h3>TODOs</h3>
+
+                <div id="no-todos">
+                    <p>Add a todo to get started</p>
+                    <button id="add-first-todo">Add Now</button>
+                </div>
+
+                <div id="todo-list">
+                    <div id="todo-list-wrapper">
+                        <div class="todo-item">
+                            <label>
+                                <input type="checkbox">
+                                <p class="todo-text">Buy apples</p>
+                            </label>
+                            <i class="far fa-trash-alt delete-icon"></i>
+                        </div>
+                        <div class="todo-item">
+                            <label>
+                                <input type="checkbox">
+                                <p class="todo-text todo-item-completed">Finish Assignment</p>
+                            </label>
+                            <i class="far fa-trash-alt delete-icon"></i>
+                        </div>
+                    </div>
+
+                    <input type="text" id="new-todo" placeholder="Add New" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>

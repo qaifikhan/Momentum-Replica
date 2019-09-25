@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-div {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+#background-image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#weather-image {
+    width: 100%;
+    z-index: 1;
+}
+
+#time {
+    font-size: 150px;
+    font-weight: 700;
+    margin: 0;
+}
+
+#name-input-wrapper {
+    display: block;
+}
+
+#todo-input-wrapper {
+    display: none;
+}
+
+#name-input-wrapper > h4 , #major-todo-wrapper > h4 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+#name-input-wrapper > input, #major-todo-wrapper > input {
+    font-size: 48px;
+    color: white;
+    font-weight: 500;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    outline: none;
+    text-align: center;
+}
+
+#todo-input-wrapper > h3 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+#major-todo-wrapper {
+    display: block;
+}
+
+#major-todo-item {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 0;
+    text-align: center;
+    display: none;
+}
+
+#weather-info {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+
+#weather-info > div > img {
+    width: 80px;
+}
+
+#weather-info > div > span {
+    font-size: 32px;
+    font-weight: 800;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 16px;
+}
+
+#weather-info > div > p {
+    text-align: right;
+    margin-top: -18px;
+}
+
+#todos-wrapper {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    padding: 16px;
+}
+
+#todos-wrapper > h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px;
+    cursor: pointer;
+}
+
+#no-todos {
+    width: 280px;
+    height: 180px;
+    position: absolute;
+    bottom: 100px;
+    right: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: rgba(15, 15, 15, 0.95);
+    border-radius: 8px;
+
+    display: none;
+}
+
+#no-todos:after {
+    content: '';
+    width: 0; 
+    height: 0;
+    position: absolute;
+    bottom: -12px;
+    right: 36px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    
+    border-top: 12px solid rgba(15, 15, 15, 0.95);
+}
+
+#add-first-todo {
+    height: 40px;
+    border: 0;
+    padding: 8px 24px;
+    border-radius: 20px;
+    margin-top: 16px;
+
+    background-color: gray;
+    color: white;
+
+    outline: none;
+    cursor: pointer;
+}
+
+#todo-list {
+    width: 280px;
+    position: absolute;
+    bottom: 100px;
+    right: 24px;
+
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: rgba(15, 15, 15, 0.95);
+    border-radius: 8px;
+
+    display: none;
+}
+
+#todo-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list:after {
+    content: '';
+    width: 0; 
+    height: 0;
+    position: absolute;
+    bottom: -12px;
+    right: 36px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    
+    border-top: 12px solid rgba(15, 15, 15, 0.95);
+}
+
+#todo-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+
+    padding: 8px 0;
+}
+
+.todo-text {
+    display: inline-block;
+    margin: 0;
+    margin-right: 8px;
+    vertical-align: top;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.todo-item-completed {
+    text-decoration: line-through;
+}
+
+#new-todo {
+    width: 100%;
+    margin-top: 24px;
+    border: 0;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.delete-icon {
+    cursor: pointer;
+}
